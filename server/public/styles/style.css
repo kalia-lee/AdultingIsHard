@@ -1,7 +1,6 @@
-#mainBody {
-  background-color: antiqueWhite;
-}
-.title {
+body {
+  background: red; }
+
+.h1 {
   color: DarkBlue;
-  text-shadow: 1px 1px 1px black;
-}
+  text-shadow: 1px 1px 1px black; }
