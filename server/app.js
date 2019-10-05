@@ -8,9 +8,12 @@ var port = process.env.PORT || 5000;
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));
 
-const db = require('./routes/queries')
+app.use(express.static(__dirname + '/public'));
+app.set('views', __dirname + '/views');
 
-app.get('/names', db.getUsers)
+const queries = require('./routes/queries')
+
+app.get('/names', queries.getUsers)
 //app.get('/users/:id', db.getUserById)
 //app.post('/users', db.createUser)
 //app.put('/users/:id', db.updateUser)
@@ -22,11 +25,7 @@ app.get('/names', (request, response) => {
 })
 */
 
-// Serve back static files by default
-app.get('/*', function(req, res){
-  var file = req.params[0] || 'views/index.html';
-  res.sendFile(path.join(__dirname, '/public', file));
-});
+app.get('/dashboard', queries.dashboard);
 
 // Start listenting for requests at given PORT
 app.listen(port, function(){

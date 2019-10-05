@@ -16,12 +16,21 @@ const getUsers = (request, response) => {
   });
 }
 
+const dashboard = (request, response) => {
+  const users = [
+      { name: 'Grace' }
+  ];
+  response.render('dashboard.ejs', {
+      users
+  });
+};
 
 
 
 
 module.exports = {
   getUsers,
+  dashboard
   /*getUserById,
   createUser,
   updateUser,
