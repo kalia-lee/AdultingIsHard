@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 
-const queries = require('./routes/queries')
+const queries = require('./routes/queries');
 
 app.get('/names', queries.getUsers)
 //app.get('/users/:id', db.getUserById)
@@ -26,6 +26,7 @@ app.get('/names', (request, response) => {
 */
 
 app.get('/dashboard', queries.dashboard);
+app.get('/*', queries.dashboard); //catch all
 
 // Start listenting for requests at given PORT
 app.listen(port, function(){

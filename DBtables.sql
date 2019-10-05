@@ -1,3 +1,10 @@
+-- Need to have PostgreSQL installed and running in the background --
+-- Can use Postico as an app to edit database and run SQL queries --
+
+-- 0a -> Have PostgreSQL running in the background first --
+-- 0b -> Open Postico & connect to your localhost Postgres server
+-- 0c. -> Create a new database called adulting_app
+
 ----- 1. Create New Database -----
 
 create database adulting_app;
