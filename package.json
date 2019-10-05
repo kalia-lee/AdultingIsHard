@@ -5,14 +5,22 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/app.js"
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js",
+    "sass": "node-sass server/sass/main.scss server/public/styles/style.css",
+    "sass-dev": "node-sass server/sass/main.scss server/public/styles/style.css -w"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
     "express": "^4.17.1",
     "path": "^0.12.7",
     "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.3"
   }
 }
