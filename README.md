@@ -1,7 +1,7 @@
 # AdultingIsHard
 
 local scripts — run both of these to see site locally
-in the project root\
+in the project root
 
 run `npm install` first!
 
