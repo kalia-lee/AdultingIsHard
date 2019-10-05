@@ -52,4 +52,8 @@ CREATE TABLE events (
 );
 
 INSERT INTO events ("eventName", "userId", "categoryId", "frequency", "reminderDate")
-VALUES ("Oil change", 1, 2, 60, "2019-12-15");
+VALUES ("Oil change", 1, 2, 60, "2019-12-15"),
+"Dentist appt", 1, 1, 180, "2019-12-15"),
+"Dentist appt", 1, 1, 180, "2020-03-20"),
+"Pap", 1, 1, 1825, "2019-10-29"),
+"Renew Renter's insurance", 1, 2, 365, "2020-05-31")
