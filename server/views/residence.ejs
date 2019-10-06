@@ -5,9 +5,9 @@
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         </head>
         <body>
-            <h2>Residence</h2>
-    
-            <button class="accordion">Apartment</button>
+            <h2>Residency</h2>
+
+            <button class="accordion">Rental Lease</button>
             <div class="panel">
                 <div class="assets-info">
                     <div class="card">
@@ -21,9 +21,9 @@
                             </div>
                     </div>
                     <button id="car-scheduler" onclick="updateEvent()"> Reminder Update! </button>
-    
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    
+
                     <div class="upcoming-apmt">
                         <h2>Upcoming Due Dates</h2>
                         <div class="card" style="width:20%">
@@ -54,24 +54,27 @@
                         </div>
                     </div>
                 </div>
-            </div>
-    
+            </div>   
             <button class="accordion">Dorm</button>
             <div class="panel">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-    
-            <button class="accordion">Home</button>
+
+            <button class="accordion">Home Ownership</button>
             <div class="panel">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-    
+
+            <button>
+                <a href="./">Back to Dashboard</a>
+            </button>
+
             <script src="/scripts/client.js"></script>
         </body>
         <script>
                 var acc = document.getElementsByClassName("accordion");
                 var i;
-    
+
                 for (i = 0; i < acc.length; i++) {
                   acc[i].addEventListener("click", function() {
                     this.classList.toggle("active");
@@ -85,4 +88,3 @@
                 }
         </script>
     </html>
-    
