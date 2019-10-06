@@ -9,7 +9,11 @@ const pool = new Pool({
 
 const dashboard = (request, response) => {
   const users = [
-      { name: 'Grace' }
+      { name: 'Grace',
+        email: 'graceJones@gmail.com',
+        address: '1234 Seasame St. NW',
+        zipCode: '55401'
+      }
   ];
   response.render('dashboard.ejs', {
       users
