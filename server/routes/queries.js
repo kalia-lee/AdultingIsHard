@@ -7,32 +7,43 @@ const pool = new Pool({
   port: 5432,
 });
 
-const dashboard = (request, response) => {
+// VIEWS
+
+// dashboard/home
+const dashboardView = (request, response) => {
   const users = [
-      { name: 'Grace',
-        email: 'graceJones@gmail.com',
-        address: '1234 Seasame St. NW',
-        zipCode: '55401'
-      }
+    {
+      name: 'Grace',
+      email: 'graceJones@gmail.com',
+      address: '1234 Seasame St. NW',
+      zipCode: '55401'
+    }
   ];
   response.render('dashboard.ejs', {
-      users
+    users
   });
 };
 
-const assets = (request, response) => {
-  /*const users = [
-      { name: 'Grace' }
-  ];*/
-  response.render('assets.ejs');
-};
-
-const healthGeneral = (request, response) => {
-  /*const users = [
-      { name: 'Grace' }
-  ];*/
+// health
+const healthGeneralView = (request, response) => {
   response.render('health-general.ejs');
 };
+
+// personal
+const personalView = (request, response) => {
+  response.render('personal.ejs');
+};
+
+// residence
+const residenceView = (request, response) => {
+  response.render('residence.ejs');
+};
+
+// vehicle
+const vehicleView = (request, response) => {
+  response.render('vehicle.ejs');
+};
+
 /////// CRUD ROUTES ///////
 
 // GET all users from the Users table
@@ -128,9 +139,11 @@ const updateEvent = (request, response) => {
 
 module.exports = {
   getUsers,
-  dashboard,
-  assets,
-  healthGeneral,
+  dashboardView,
+  healthGeneralView,
+  personalView,
+  residenceView,
+  vehicleView,
   getAllEvents,
   getHealthEvents,
   getAssetEvents,
