@@ -57,10 +57,40 @@
     font-size: 16px; }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  z-index: 0; }
+  background: linear-gradient(to bottom right, #6bc6c1, #379b93);
+  font-family: Geneva, Tahoma, Verdana, sans-serif; }
   body .dashboard-container {
-    background: linear-gradient(to bottom right, #6bc6c1, #379b93); }
+    display: grid;
+    grid-template-columns: 2fr 5fr 1fr;
+    grid-gap: 2rem; }
+    body .dashboard-container .leftPanel {
+      margin: 2rem; }
+      body .dashboard-container .leftPanel .nav-menu ul {
+        display: grid;
+        grid-gap: 0.25rem; }
+        body .dashboard-container .leftPanel .nav-menu ul li {
+          color: darkgray;
+          list-style-type: none;
+          border: 1px solid #ffebd2;
+          padding: .25rem; }
+          body .dashboard-container .leftPanel .nav-menu ul li:hover {
+            transition: background-color 2s ease-out;
+            background: #ffe0b9; }
+          body .dashboard-container .leftPanel .nav-menu ul li a {
+            text-decoration: none; }
+    body .dashboard-container .rightPanel h1 {
+      text-align: center; }
+    body .dashboard-container .personalInfo {
+      color: #fff;
+      padding: 1rem;
+      border: 1px solid #ffebd2; }
+    body .dashboard-container .cardContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem; }
+      body .dashboard-container .cardContainer .reminderCard {
+        border: 1px solid #ffebd2;
+        text-align: center; }
