@@ -1,0 +1,24 @@
+/* colors — placeholder hexes, feel free to keep/edit/trash any of these */
+$white: #fff;
+$black: #000;
+$blue: #6bc6c1;
+$indigo: #af86f0;
+$purple: #7e6e9b;
+$pink: #ffceca;
+$red: #c52e3a;
+$orange: #fda014;
+$yellow: #ffebd2;
+$green: #6dd485;
+$teal: #379b93;
+$light-blue: #a1d8ec;
+
+/* theme palette */
+$theme-colors: (
+	primary: #465a5f,
+	secondary: #d1dde0,
+	tertiary: #1e768b,
+	success: $green,
+	info: $light-blue,
+	warning: $orange,
+	danger: $red
+);

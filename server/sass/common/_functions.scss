@@ -1,0 +1,4 @@
+/* to retrieve color sass maps from _variables */
+@function theme-color($key: "primary") {
+	@return map-get($theme-colors, $key);
+}

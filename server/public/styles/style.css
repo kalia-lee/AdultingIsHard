@@ -1,10 +1,7 @@
-body {
-  background: red; }
-
-.h1 {
-  color: DarkBlue;
-  text-shadow: 1px 1px 1px black; }
-
+/* load all sass files */
+/* add variables */
+/* to retrieve color sass maps from _variables */
+/* add views */
 .accordion {
   background-color: #eee;
   color: #444;
