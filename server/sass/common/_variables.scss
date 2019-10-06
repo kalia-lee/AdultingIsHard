@@ -1,9 +1,11 @@
 /* colors — placeholder hexes, feel free to keep/edit/trash any of these */
+$white: #fff;
+$black: #000;
 $blue: #6bc6c1;
 $indigo: #af86f0;
 $purple: #7e6e9b;
 $pink: #ffceca;
-$red: #ac2833;
+$red: #c52e3a;
 $orange: #fda014;
 $yellow: #ffebd2;
 $green: #6dd485;
@@ -18,16 +20,5 @@ $theme-colors: (
 	success: $green,
 	info: $light-blue,
 	warning: $orange,
-	danger: $red,
-	light: $gray-100,
-	dark: $gray-800,
-	light-green: #40ae49,
-	mid-green: #3c7836,
-	dark-green: #2b5a26,
-	light-orange: #ed9700,
-	dark-orange: #fb7a02,
-	brown-orange: #b05600,
-	dark-red: #a60000,
-	dark-blue: #111437,
-	light-blue: #0846b0,
+	danger: $red
 );
