@@ -22,17 +22,31 @@ function receiveMessage(){
 
   const app = express();
 
+  var bodyParser = require('body-parser');
+  app.use(bodyParser.json()); // support json encoded bodies
+  app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
   app.post('/sms', (req, res) => {
+    var from = req.body.From;
+    var body = req.body.Body;
+
+    if (body === "OIL") {
     const twiml = new MessagingResponse();
 
-    twiml.message('Thanks for scheduling your appointment!');
+    twiml.message('Thanks for making your appointment!');
 
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());
-  });
+  } else {
+    const twiml = new MessagingResponse();
 
-  http.createServer(app).listen(1337, () => {
-    console.log('Express server listening on port 1337');
+    twiml.message("Sorry, I'm not sure I understand. Please respond again with OIL when you have booked your appointment.");
+
+    res.writeHead(200, {'Content-Type': 'text/xml'});
+    res.end(twiml.toString());
+    }
+
+
   });
 }
 
