@@ -11,19 +11,31 @@
         <div class="panel">
             <div class="assets-info">
                 <div class="card">
-                        <img src="https://media.businessinsider.com/images/54999fc6eab8ea987a1468d4-640-480.jpg" alt="Avatar" style="width:100%">
+                        <img src="../assets/honda.png" alt="hondaCar" style="width:100%">
                         <div class="container">
-                            <h4><b>AI Self-Driving Car</b></h4>
+                            <h4><b>Honda Civic</b></h4>
                             <ul>
-                                <li>Google</li>
-                                <li>2026</li>
-                                <li>Miles: 1000</li>
+                                <li>Honda</li>
+                                <li>2016</li>
+                                <li>Miles: 125,764</li>
                             </ul>
                         </div>
                 </div>
                 <button id="car-scheduler" onclick="updateEvent()"> Schedule Appointment </button>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="vehicle-notes">
+              <p>Bought used in November 2017 from Morrie's Honda in Maple Grove. It had 85,762 miles when purchased.
+                There was a small dent on the rear passenger side when I bought it. There's a small chip on the passenger side
+                of the windshield I need to keep an eye on.
+              </p>
+              <div class="notes" style="width: 50%; float: right;">
+                <h3>Car Notes:</h3>
+                <ul>
+                  <li>Need oil change every 5,000 miles</li>
+                  <li>Keep eye on chip in windshield</li>
+                  <li>Have AAA in case of emergency. Card in glove compartment.</li>
+                </ul>
+              </div>
+            </div>
 
                 <div class="upcoming-apmt">
                     <h2>Upcoming Appointments</h2>
@@ -32,10 +44,22 @@
                             <h3>Oil Change</h3>
                         </header>
                         <div class="container">
-                            <p>Oct.7, 2019 - Wesley's Auto Shop</p>
+                            <p>Oct.7, 2019 @ 3:30pm - Wesley's Auto Shop</p>
                             <hr>
                             <img src="https://cdn4.iconfinder.com/data/icons/energy-4/32/Energy-icons_oil-drum-512.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
                             <p>Wesley's Auto Repair is a full-service preventive maintenance and automotive repair center. We perform high quality, guaranteed service you can trust at a fair price. We repair domestic and foreign vehicles and are your best choice for scheduled maintenance of your car, SUV, truck and fleet vehicles.</p><br>
+                        </div>
+                        <button class="w3-button w3-block w3-dark-grey" onclick="triggerTwilio()">+ Schedule New Appointment</button>
+                    </div>
+                    <div class="card" style="width:20%">
+                        <header class="w3-container w3-light-grey">
+                            <h3>Renew license tabs</h3>
+                        </header>
+                        <div class="container">
+                            <p>December - DMV</p>
+                            <hr>
+                            <img src="https://cdn3.iconfinder.com/data/icons/transport-icons-2/512/BT_c3side-512.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                            <p>DMV in Bloomington: </br> hours are </br> M-F 8am - 5pm</p><br>
                         </div>
                         <button class="w3-button w3-block w3-dark-grey" onclick="triggerTwilio()">+ Schedule New Appointment</button>
                     </div>
@@ -43,14 +67,61 @@
             </div>
         </div>
 
-        <button class="accordion">Boat</button>
+        <button class="accordion">Bike Maintenance</button>
         <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div class="assets-info">
+              <div class="card">
+                      <img src="../assets/surly-bike.jpg" alt="bike" style="width:100%">
+                      <div class="container">
+                          <h4><b>Road Bike</b></h4>
+                          <ul>
+                              <li>Surly</li>
+                              <li>2018</li>
+                              <li>Equipment: Rear paniers, spiked snow tires for winter</li>
+                          </ul>
+                      </div>
+              </div>
+              <div class="vehicle-notes">
+                <button id="car-scheduler" onclick="updateEvent()"> Schedule Appointment </button>
+
+                <p>Bought the bike new in 2018 for commuting to work. Have road tires and winter tires. New paniers were bought
+                in Spring of 2019. Registed bike serial number with Minneapolis PD.</p>
+
+                <div class="notes" style="width: 50%; float: right;">
+                  <h3>Bike Notes:</h3>
+                  <ul>
+                    <li>Need to winterize bike in late November.</li>
+                    <li>Rear paniers are water resistent, but not great in a serious downpour.</li>
+                    <li>Need a new hemlet in 2020.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="upcoming-apmt">
+                  <h2>Upcoming Appointments</h2>
+                  <div class="card" style="width:20%">
+                      <header class="w3-container w3-light-grey">
+                          <h3>Winterize bike</h3>
+                      </header>
+                      <div class="container">
+                          <p>Dec.1, 2019 - Freewheel Bike, Richfield</p>
+                          <hr>
+                          <img src="https://cdn3.iconfinder.com/data/icons/outline-amenities-icon-set/64/Bike-512.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                          <p>Freewheel Bike is a full-service bike maintenance and  repair center. We perform high quality, guaranteed service you can trust at a fair price. </p>
+                      <button class="w3-button w3-block w3-dark-grey" onclick="triggerTwilio()">+ Schedule Appointment</button>
+                  </div>
+              </div>
+          </div>
+      </div>
         </div>
 
+<<<<<<< HEAD
+        <button class="accordion">Other</button>
+=======
         <button>
             <a href="./">Back to Dashboard</a>
         </button>
+>>>>>>> 0a9cfc77338bf8079c0894670e3c629fefdb08da
         <div class="panel">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
