@@ -11,22 +11,22 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 
+
 const queries = require('./routes/queries')
 const twilio = require('./modules/twilio')
 
-app.get('/names', queries.getUsers)
-//app.get('/users/:id', db.getUserById)
-//app.post('/users', db.createUser)
-//app.put('/users/:id', db.updateUser)
-//app.delete('/users/:id', db.deleteUser)
+app.get('/names', queries.getUsers);
+app.get('/getAllEvents', queries.getAllEvents);
+app.get('/getHealthEvents', queries.getHealthEvents);
+app.get('/getAssetEvents', queries.getAssetEvents);
+app.get('/getPersonalEvents', queries.getPersonalEvents);
+app.post('/createEvent', queries.createEvent);
+app.put('/updateEvent', queries.updateEvent);
 
-/*
-app.get('/names', (request, response) => {
-  response.json({ info: 'Node.js, Express, and Postgres API' });
-})
-*/
 
 app.get('/dashboard', queries.dashboard);
+app.get('/assets', queries.assets);
+app.get('/*', queries.dashboard); //catch all
 
 app.post('/sms', twilio.receiveMessage);
 

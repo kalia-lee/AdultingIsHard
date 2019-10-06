@@ -1,9 +1,13 @@
-// write styling here!
-body {
-    background: red;
-  }
-  .h1 {
-    color: DarkBlue;
-    text-shadow: 1px 1px 1px black;
-  }
-  
+/* load all sass files */
+
+/* add variables */
+@import "common/functions";
+@import "common/variables";
+
+/* add views */
+@import "layouts/assets";
+@import "layouts/car";
+@import "layouts/dashboard";
+@import "layouts/health";
+@import "layouts/personal";
+@import "layouts/residency";
