@@ -1,65 +1,71 @@
-
 <html>
-    <head>
-        <link rel="stylesheet" href="/styles/style.css">
-	      <title>Adulting is hard</title>
-        <style type="text/css">
-            .leftPanel { color: blue; width: 10em;}
 
-        </style>
-    </head>
-    <body>
-      <div class="container" style="background-image: linear-gradient(to bottom right, #6BC6C1, #379B93); display: flex; height: 90%">
+<head>
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>Adulting is hard</title>
+  <style type="text/css">
+    .leftPanel {
+      color: blue;
+      width: 10em;
+    }
+  </style>
+</head>
 
-        <div id="leftPanel" style="color: white; width: 25%; height: 90%; display: inline-block;">
-          <div id="photo">
-            <img src="../assets/grace-jones.jpg" />
-          </div>
-          <p>
-              <h2 style="text-align: center;">Welcome <%= users[0].name %> ! </h2>
-          </p>
-          <div id="menu">
-            <ul>
-              <li><a href="./health-general" style="color: #FFCECA;">Health</a></li>
-              <li><a href="./residence" style="color: #FFCECA;">Residency</a></li>
-              <li><a href="./vehicle" style="color: #FFCECA;">Vehicle</a></li>
-              <li><a href="./personal" style="color: #FFCECA;">Personal</a></li>
-            </ul>
-          </div>
-        </div>
-        <div id="rightPanel" style="color: white; width: 70%; height: 90%; display: inline-block;">
-          <h1 style="text-align: center;">Adulting Is Hard</h1>
-          <div id="personalInfo">
-              <p> <b>Name:</b> <%= users[0].name %> </p>
-              <p> <b>Email:</b> <%= users[0].email %> </p>
-              <p> <b>Address:</b> <%= users[0].address %> </p>
-              <p> <b>Zip Code:</b> <%= users[0].zipCode %> </p>
-          </div>
-          <button>Reminder Update</button>
-          <div>
-            <h2>Upcoming Reminders</h2>
-            <div class="reminderCard" style="color: white; width: 40%; display: inline-block; border: 1px solid #FFEBD2; text-align: center;">
-              <h3>Oil Change</h3>
-              <p>
-                <b>Date: </b> Oct. 20th @ 2:30pm
-              </p>
-              <p>
-                <b>Location: </b> Bob & Steve's Auto World, Tangletown
-              </p>
-            </div>
-            <div class="reminderCard" style="color: white; width: 40%; display: inline-block; border: 1px solid #FFEBD2; text-align: center;">
-              <h3>Dentist Appt.</h3>
-              <p>
-                <b>Date: </b> Nov. 1st @ 9:30am
-              </p>
-              <p>
-                <b>Location: </b> Park Dental, St. Louis Park
-              </p>
-            </div>
-          </div>
-        </div>
+<body>
+  <div class="dashboard-container">
 
+    <div class="leftPanel" style="color: white; width: 25%; height: 90%; display: inline-block;">
+      <div id="photo">
+        <img src="../assets/grace-jones.jpg" />
       </div>
-        <script src="/scripts/client.js"></script>
-    </body>
+      <p>
+        <h2>Welcome <%= users[0].name %> ! </h2>
+      </p>
+      <div class="nav-menu">
+        <ul>
+          <li><a href="./health-general" style="color: #FFCECA;">Health</a></li>
+          <li><a href="./residence" style="color: #FFCECA;">Residency</a></li>
+          <li><a href="./vehicle" style="color: #FFCECA;">Vehicle</a></li>
+          <li><a href="./personal" style="color: #FFCECA;">Personal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rightPanel">
+      <h1>Adulting Is Hard</h1>
+      <div class="personalInfo">
+        <p> <b>Name:</b> <%= users[0].name %> </p>
+        <p> <b>Email:</b> <%= users[0].email %> </p>
+        <p> <b>Address:</b> <%= users[0].address %> </p>
+        <p> <b>Zip Code:</b> <%= users[0].zipCode %> </p>
+      </div>
+
+      <div class="upcomingHeader">
+        <h2>Upcoming Reminders</h2>
+      </div>
+      <div class="cardContainer">
+        <div class="reminderCard">
+          <h3>Oil Change</h3>
+          <p>
+            <b>Date: </b> Oct. 20th @ 2:30pm
+          </p>
+          <p>
+            <b>Location: </b> Bob & Steve's Auto World, Tangletown
+          </p>
+        </div>
+        <div class="reminderCard">
+          <h3>Dentist Appt.</h3>
+          <p>
+            <b>Date: </b> Nov. 1st @ 9:30am
+          </p>
+          <p>
+            <b>Location: </b> Park Dental, St. Louis Park
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="/scripts/client.js"></script>
+</body>
+
 </html>

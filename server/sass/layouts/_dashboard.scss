@@ -1,0 +1,63 @@
+body {
+  margin: 0; // center full site margin
+  padding: 0;
+  width: 100%;
+  background: linear-gradient(to bottom right, #6bc6c1, #379b93);
+  font-family: Geneva, Tahoma, Verdana, sans-serif;
+
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: 2fr 5fr 1fr;
+    grid-gap: 2rem;
+
+    .leftPanel {
+      margin: 2rem;
+
+      .nav-menu {
+        ul {
+          display: grid;
+          grid-gap: 0.25rem;
+
+          li {
+            color: darkgray;
+            list-style-type: none;
+            border: 1px solid #ffebd2;
+            padding: .25rem;
+
+            &:hover {
+              transition: background-color 2s ease-out;
+              background: darken(#ffebd2, 5%);
+            }
+
+            a {
+                text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .rightPanel {
+      h1 {
+        text-align: center;
+      }
+    }
+
+    .personalInfo {
+      color: $white;
+      padding: 1rem;
+      border: 1px solid #ffebd2;
+    }
+
+    .cardContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+
+      .reminderCard {
+        border: 1px solid #ffebd2;
+        text-align: center;
+      }
+    }
+  }
+}
