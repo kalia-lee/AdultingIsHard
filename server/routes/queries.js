@@ -25,12 +25,19 @@ const dashboard = (request, response) => {
   });
 };
 
+const assets = (request, response) => {
+  /*const users = [
+      { name: 'Grace' }
+  ];*/
+  response.render('assets.ejs');
+};
 
 
 
 module.exports = {
   getUsers,
-  dashboard
+  dashboard,
+  assets
   /*getUserById,
   createUser,
   updateUser,
