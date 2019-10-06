@@ -23,6 +23,12 @@ const assets = (request, response) => {
   response.render('assets.ejs');
 };
 
+const healthGeneral = (request, response) => {
+  /*const users = [
+      { name: 'Grace' }
+  ];*/
+  response.render('health-general.ejs');
+};
 /////// CRUD ROUTES ///////
 
 // GET all users from the Users table
@@ -120,6 +126,7 @@ module.exports = {
   getUsers,
   dashboard,
   assets,
+  healthGeneral,
   getAllEvents,
   getHealthEvents,
   getAssetEvents,
