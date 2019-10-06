@@ -16,10 +16,10 @@ async function getNamesFromDB(){
   console.log('response: ', text);
 };
 
+
 function triggerTwilio() {
   twilio.sendReminder("Grace", "oil change", "URL_GOES_HERE")
 }
-
 // async function checkDueDate() {
 //   let today = new Date();
 //   var response = await fetch('http://localhost:5000/events'); //Pull events from Database
