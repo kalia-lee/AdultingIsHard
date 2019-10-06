@@ -1,10 +1,7 @@
-body {
-  background: red; }
-
-.h1 {
-  color: DarkBlue;
-  text-shadow: 1px 1px 1px black; }
-
+/* load all sass files */
+/* add variables */
+/* to retrieve color sass maps from _variables */
+/* add views */
 .accordion {
   background-color: #eee;
   color: #444;
@@ -17,7 +14,8 @@ body {
   font-size: 15px;
   transition: 0.4s; }
 
-.active, .accordion:hover {
+.active,
+.accordion:hover {
   background-color: #ccc; }
 
 .panel {
@@ -33,7 +31,7 @@ body {
   float: left;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-right: 10px; }
+  margin-right: 10px; }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
@@ -42,9 +40,10 @@ body {
   padding: 2px 16px; }
 
 .assets-info {
-  padding-left: 10px; }
+  margin-top: 10px;
+  margin-left: 10px; }
   .assets-info #car-scheduler {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     /* Green */
     border: none;
     color: white;
