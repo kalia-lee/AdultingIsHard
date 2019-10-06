@@ -1,0 +1,80 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+        <h2 class="center">Health</h2>
+
+        <button class="accordion">General Health</button>
+        <div class="panel">
+            <div class="assets-info">
+                <div class="card">
+                        <img src="../assets/grace-jones.jpg" alt="Avatar" style="width:100%">
+                        <div class="container">
+                            <h4><b>Grace Jones</b></h4>
+                            <ul>
+                                <li>Age <b>71</b></li>
+                                <li>Date of Birth <b>5/19/48</b></li>
+                                <li>Height <b>5'10"</b> </li>
+                            </ul>
+                        </div>
+                </div>
+                <button id="car-scheduler" onclick="updateEvent()"> Update Info </button>
+
+                <p>It's important to keep your information updated so we can keep our timers accurate to <b>you!</b></p>
+
+                <div class="upcoming-apmt">
+                    <h2>Upcoming Appointments</h2>
+                    <div class="card" style="width:20%">
+                        <header class="w3-container w3-light-grey">
+                            <h3>Pap Smear</h3>
+                        </header>
+                        <div class="container">
+                            <p>DUE - Find healthcare provider near you</p>
+                            <hr>
+                            <img src="https://icon-library.net/images/doctor-appointment-icon/doctor-appointment-icon-21.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                            <p>First Pap Smear should be conducted at age 21, and should be conducted every five years after.</p><br>
+                            <p><i>We see you haven't scheduled an appointment recently, click below to be messaged a list of healthcare providers near you</i></p>
+                        </div>
+                        <button class="w3-button w3-block w3-dark-grey">+ Schedule New Appointment!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="accordion">Mental Health</button>
+        <div class="panel">
+        <p></p>
+        </div>
+
+        <button class="accordion">Reproductive Health</button>
+        <div class="panel">
+        <p></p>
+        </div>
+
+        <!-- <p><a href="./dashboard" style="color: #6bc6c1;">Home</a></p> -->
+        <button>
+            <a href="./">Back to Dashboard</a>
+        </button>
+
+        <script src="/scripts/client.js"></script>
+    </body>
+    <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+    </script>
+</html>

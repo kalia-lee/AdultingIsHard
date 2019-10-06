@@ -23,10 +23,17 @@ app.get('/getPersonalEvents', queries.getPersonalEvents);
 app.post('/createEvent', queries.createEvent);
 app.put('/updateEvent', queries.updateEvent);
 
+// VIEWS //
+app.get('/', queries.dashboardView);
+app.get('/dashboard', queries.dashboardView);
+app.get('/health-general', queries.healthGeneralView);
+app.get('/residence', queries.residenceView);
+app.get('/personal', queries.personalView);
+app.get('/vehicle', queries.vehicleView);
 
-app.get('/dashboard', queries.dashboard);
-app.get('/assets', queries.assets);
-app.get('/*', queries.dashboard); //catch all
+app.post('/goGoTwilio', twilio.sendReminder);
+//app.get('/*', queries.dashboard); //catch all
+
 
 app.post('/sms', twilio.receiveMessage);
 
