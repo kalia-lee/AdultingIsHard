@@ -1,14 +1,15 @@
 const twilio = require('../../config');
 
-function sendReminder(username, appointmentName, url){
+function sendReminder(){
   const accountSid = twilio.twilioSID;
   const authToken = twilio.twilioAuthToken;
   const client = require('twilio')(accountSid, authToken);
-  let messageText = "Hi, " + username + " this is Automate My Life checking in! Just wanted to remind you to schedule your " + appointmentName + " appointment soon. When you've scheduled your appointment, respond back with OIL. Click here to schedule your appointment: " + url
+  let username = "Grace"
+
 
   client.messages
     .create({
-       body: "messageText",
+       body: "Hi " + username + "! Adulting is Hard here. Just wanted to remind you to schedule your oil change appointment soon. When you've scheduled your appointment, respond back with OIL. Here are a few oil change vendors within a 3 mile radius of your residence:\n\nElectra Tune Tire & Auto: electratune.com\nPrecision Tune Auto Care: precisiontune.com\nCar-X Tire & Auto: carx.com",
        from: twilio.twilioPhoneSend,
        to: twilio.twilioMyPhone
      })
