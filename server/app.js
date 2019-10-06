@@ -30,7 +30,10 @@ app.get('/health-general', queries.healthGeneralView);
 app.get('/residence', queries.residenceView);
 app.get('/personal', queries.personalView);
 app.get('/vehicle', queries.vehicleView);
-// app.get('/*', queries.dashboard); //catch all
+
+app.post('/goGoTwilio', twilio.sendReminder);
+//app.get('/*', queries.dashboard); //catch all
+
 
 app.post('/sms', twilio.receiveMessage);
 
