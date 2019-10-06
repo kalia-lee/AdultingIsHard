@@ -12,6 +12,7 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 
 const queries = require('./routes/queries')
+const twilio = require('./modules/twilio')
 
 app.get('/names', queries.getUsers)
 //app.get('/users/:id', db.getUserById)
@@ -26,6 +27,8 @@ app.get('/names', (request, response) => {
 */
 
 app.get('/dashboard', queries.dashboard);
+
+app.post('/sms', twilio.receiveMessage);
 
 // Start listenting for requests at given PORT
 app.listen(port, function(){
