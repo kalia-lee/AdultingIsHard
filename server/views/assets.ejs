@@ -1,0 +1,56 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/style.css">
+    </head>
+    <body>
+        <h2>Assets</h2>
+
+        <button class="accordion">Car</button>
+        <div class="panel">
+            <div class="card">
+                    <img src="https://media.businessinsider.com/images/54999fc6eab8ea987a1468d4-640-480.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>AI Self-Driving Car</b></h4> 
+                        <ul>
+                            <li>Google</li>
+                            <li>2026</li>
+                            <li>Miles: 1000</li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="assets-info">
+                <button id="car-scheduler" onclick="updateEvent()"> Reminder Update! </button>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+
+        <button class="accordion">Boat</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Home</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <script src="/scripts/client.js"></script>
+    </body>
+    <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+    </script>
+</html>

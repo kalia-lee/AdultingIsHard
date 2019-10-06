@@ -14,6 +14,33 @@ async function getNamesFromDB(){
   console.log('response: ', text);
 };
 
+async function checkDueDate() {
+  let today = new Date();
+  var response = await fetch('http://localhost:5000/events'); //Pull events from Database
+  var events = await response.json();
+
+  events.forEach(function(date){
+    if(today.getTime() == date.getTime()) {
+      //TODO - Twilio Text!
+    }
+  })
+}
+
+async function addEvent() {
+  //TODO
+  var newEvent = {
+    
+  }
+  // Post to DB
+  var response = await fetch('http://localhost:5000/add/events'); //Pull events from Database
+
+
+}
+
+async function updateEvent() {
+  //TODO
+}
+
 /*
 request.onreadystatechange = function() {
   if(request.readyState === 4) {

@@ -16,6 +16,13 @@ const dashboard = (request, response) => {
   });
 };
 
+const assets = (request, response) => {
+  /*const users = [
+      { name: 'Grace' }
+  ];*/
+  response.render('assets.ejs');
+};
+
 /////// CRUD ROUTES ///////
 
 // GET all users from the Users table
@@ -112,6 +119,7 @@ const updateEvent = (request, response) => {
 module.exports = {
   getUsers,
   dashboard,
+  assets,
   getAllEvents,
   getHealthEvents,
   getAssetEvents,

@@ -23,6 +23,7 @@ app.put('/updateEvent', queries.updateEvent);
 
 
 app.get('/dashboard', queries.dashboard);
+app.get('/assets', queries.assets);
 app.get('/*', queries.dashboard); //catch all
 
 // Start listenting for requests at given PORT
