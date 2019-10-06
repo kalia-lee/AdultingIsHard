@@ -1,6 +1,9 @@
+@charset "UTF-8";
 /* load all sass files */
 /* add variables */
 /* to retrieve color sass maps from _variables */
+/* colors — placeholder hexes, feel free to keep/edit/trash any of these */
+/* theme palette */
 /* add views */
 .accordion {
   background-color: #eee;
@@ -29,6 +32,7 @@
   transition: 0.3s;
   width: 40%;
   float: left;
+  padding-top: 20px;
   padding-bottom: 20px;
   margin-right: 10px; }
 
